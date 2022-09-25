@@ -62,4 +62,23 @@ elif q_number == 4:
     print('Это четвертый четверт X > 0, Y < 0')
 elif q_number > 4:
     print('Нет такой четверти')
-    
+
+
+# 5. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве. https://ru.onlinemschool.com/math/library/analytic_geometry/point_point_length/
+# in
+# - 3
+# - 6
+# - 2
+# - 1
+
+# out
+# 5.099
+
+Xa = int(input('Xa: '))
+Ya = int(input('Yb: '))
+
+Xb = int(input('Xb: '))
+Yb = int(input('Yb: '))
+
+print(f"{((Xb - Xa) ** 2 + (Yb + Ya) ** 2) ** 0.5:0.4}")
+
