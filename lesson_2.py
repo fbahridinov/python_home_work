@@ -5,7 +5,7 @@
 # - 198.45 -> 27
 
 number = input('Enter the number: ')
-n = len(number)
+n = len(number) -1
 
 number = float(number)
 
@@ -17,3 +17,19 @@ while number > 0:
     number = number // 10
 
 print(summa)
+
+# 2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
+# 1 - 1 * 1, 2 - 1 * 2, 3 - 1 * 2 * 3, 4 - 1 * 2 * 3 * 4 и т.д.
+# - 4 -> [1, 2, 6, 24]
+# - 6 -> [1, 2, 6, 24, 120, 720]
+
+
+factorial = int(input('Enter number N: '))
+
+result = 1
+index = 1
+
+while index < factorial:
+    result *= index
+    print(result)
+    index += 1
