@@ -33,3 +33,15 @@ while index < factorial:
     result *= index
     print(result)
     index += 1
+
+# 3. Задайте список из n чисел, заполненный по формуле (1 + 1/n) ** n и выведите на экран их сумму.
+# Для n = 6: [2, 2, 2, 2, 2, 3] -> 13
+
+n = int(input('Enter your number N: '))
+
+def sq_function (num):
+    return[round((1 + 1/c) ** c) for c in range(1, n + 1)]
+
+print(sq_function(n))
+print(sum(sq_function(n)))
+
