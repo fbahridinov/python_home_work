@@ -7,7 +7,7 @@
 # [10, 2, 3, 8, 9]
 # 22
 
-# Вариант № 1
+# Вариант № 1 без функции
 
 import random
 
@@ -28,7 +28,7 @@ for position in arb_numb:
         sum += position
 print(sum)
 
-# Вариант № 2
+# Вариант № 2 тут с функции
 
 import random
 
@@ -49,3 +49,45 @@ def list_create(number):
 
 list_create(your_array)
 
+
+# 2. Напишите программу, которая найдёт произведение пар чисел списка.
+# Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+# in
+# 4
+#
+# out
+# [2, 5, 8, 10]
+# [20, 40]
+#
+# in
+# 5
+#
+# out
+# [2, 2, 4, 8, 8]
+# [16, 16, 4]
+
+import random
+
+list_var = int(input('in: '))
+
+
+def list_generator(value):
+    gen_list = []
+    for i in range(1, value + 1):
+        gen_list.append(random.randint(0, 59))
+    print(gen_list)
+
+    gathering_list = []
+
+    list_len = len(gen_list)
+
+    for j in range(list_len // 2):
+        gathering_list.append(gen_list[j] * gen_list[-1])
+
+    if list_len % 2:
+        gathering_list.append(gen_list[list_len // 2])
+
+    print(gathering_list)
+
+
+list_generator(list_var)
