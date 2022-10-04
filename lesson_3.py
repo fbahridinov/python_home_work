@@ -91,3 +91,31 @@ def list_generator(value):
 
 
 list_generator(list_var)
+
+
+# 3. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+# Без использования встроенной функции преобразования, без строк.
+# in
+# 88
+# out
+# 1011000
+#
+# in
+# 11
+# out
+# 1011
+
+
+def compiler(value):
+    if value <= 0:
+        print(value)
+    string_v = ""
+    while value > 0:
+        string_v = str(value % 2) + string_v
+        value = value // 2
+
+    print(string_v)
+
+
+compiler(int(input('In: ')))
+
